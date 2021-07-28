@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+
+$nav-height: 3rem;
+
+/*========== Colors ==========*/
+$main-color: #4FB2E5;
+$title-color: #2F6E89;
+$text-color: #4B4B4B;
+$header-bgc-color: rgba(79, 178, 229, 0.2);
+
+/*========== Font and typography ==========*/
+$body-font: 'Lato', sans-serif;
+$body-font-2: 'Poppins', sans-serif;
+
+$biggest-font-size: 2rem;
+$h2-font-size: 1.25rem;
+$h3-font-size: 1.125rem;
+$normal-font-size: 0.938rem;
+$small-font-size: .813rem;
+
+
+/*========== Font weight ==========*/
+$font-semi-bold: 600;
+$font-bold: 700;
+
+/*========== Margines ==========*/
+$mb-1: .5rem;
+$mb-2: 1rem;
+$mb-3: 1.5rem;
+$mb-4: 2rem;
+$mb-5: 2.5rem;
+$mb-6: 3rem;
+
+/*========== z index ==========*/
+$z-tooltip: 10;
+$z-index: 100;
+
+@media screen and (min-width: 968px) {
+  $biggest-font-size: 3.5rem;
+  $h2-font-size: 1.75rem;
+  $h3-font-size: 1.25rem;
+  $normal-font-size: 1rem;
+  $small-font-size: .875rem;
+}
+
+/*========== BASE ==========*/
+*, ::before, ::after {
+  box-sizing: border-box;
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: $nav-height 0 0 0;
+  font-family: $body-font;
+  font-size: $normal-font-size;
+  color: $text-color;
+}
+
+h1, h2, h3, ul, p, a {
+  margin: 0;
+  font-family: $body-font;
+}
+
+h1, h2, h3 {
+  font-weight: $font-bold;
+  color: $title-color;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+/*############################ LAYOUT ############# */
+
+.l-main {
+  overflow: hidden;
+}
+
+.bd-container {
+  max-width: 968px;
+  width: calc(100% - 3rem);
+  margin-left: $mb-3;
+  margin-right: $mb-3;
+}
+
+/*############################ HEADER ############# */
+.main-header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: $z-index;
+  background-color: $header-bgc-color;
+}
+
+/*############################ NAV ############# */
+nav {
+  font-family: $body-font;
+  height: $nav-height;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: uppercase;
+  color: $text-color;
+
+  .nav__logo img {
+    width: 300px;
+  }
+
+  .nav__list {
+
+
+    .nav__item {
+
+      .nav__link {
+        color: $text-color;
+      }
+    }
+  }
+
+}
+
+@media screen and (max-width: 768px) {
+  nav .nav__logo {
+    padding-right: 2vw;
+
+    img {
+      width: 90vw;
+      max-width: 300px;
+    }
+  }
+  .nav__menu {
+    background-color:$header-bgc-color;
+    position: fixed;
+    line-height: 2.5rem;
+    top: $nav-height;
+    left: 0;
+    right: 0;
+    width: 100%;
+    margin: 0 auto;
+    padding: 1rem 0 0;
+    transition: 0.4s;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+    border-radius: 0.3rem;
+    z-index: $z-index;
+    text-align: center;
+    font-size: 14px;
+    font-family: $body-font-2;
+    text-transform: capitalize;
+    font-weight: $font-bold;
+  }
+  .nav__menu-close{
+    transform: translateY(-100%);
+  }
+  .nav_toggle {
+    font-size: 1.3rem;
+    margin-right: -10px;
+    cursor: pointer;
+    z-index: $z-index;
+  }
+}
+
+.nav__list {
+  .nav__item {
+    a.nav__link {
+      transition: .3s;
+      &:hover {
+        color: $main-color;
+      }
+    }
+
+  }
+}
+
+
