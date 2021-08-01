@@ -1,75 +1,44 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+/*===== GOOGLE FONTS =====*/
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Montserrat:wght@400;500&display=swap');
 
+/*===== VARIABLES CSS =====*/
 
-$nav-height: 3rem;
+$header-height: 100px;
 
 /*========== Colors ==========*/
-$main-color: #4FB2E5;
+$first-color: #4FB2E5;
+$second-color: rgba(79, 178, 229, 0.2);
 $title-color: #2F6E89;
 $text-color: #4B4B4B;
-$header-bgc-color: rgba(79, 178, 229, 0.2);
+$text-color-light: #FFFFFF;
 
 /*========== Font and typography ==========*/
 $body-font: 'Lato', sans-serif;
-$body-font-2: 'Poppins', sans-serif;
-
-$biggest-font-size: 2rem;
-$h2-font-size: 1.25rem;
-$h3-font-size: 1.125rem;
-$normal-font-size: 0.938rem;
-$small-font-size: .813rem;
-
-
-/*========== Font weight ==========*/
+$biggest-font-size: 56px;
+$h2-font-size: 32px;
+$h3-font-size: 17px;
+$normal-font-size: 16px;
 $font-semi-bold: 600;
 $font-bold: 700;
-
-/*========== Margines ==========*/
-$mb-1: .5rem;
-$mb-2: 1rem;
-$mb-3: 1.5rem;
-$mb-4: 2rem;
-$mb-5: 2.5rem;
-$mb-6: 3rem;
-
-/*========== z index ==========*/
-$z-tooltip: 10;
-$z-index: 100;
-
-@media screen and (min-width: 968px) {
-  $biggest-font-size: 3.5rem;
-  $h2-font-size: 1.75rem;
-  $h3-font-size: 1.25rem;
-  $normal-font-size: 1rem;
-  $small-font-size: .875rem;
-}
-
+$font-black: 900;
+$font-regular: 400;
+$z-fixed: 100;
 /*========== BASE ==========*/
 *, ::before, ::after {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
-
 
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  margin: $nav-height 0 0 0;
+  margin: 0;
   font-family: $body-font;
   font-size: $normal-font-size;
   color: $text-color;
-}
-
-h1, h2, h3, ul, p, a {
-  margin: 0;
-  font-family: $body-font;
-}
-
-h1, h2, h3 {
-  font-weight: $font-bold;
-  color: $title-color;
 }
 
 ul {
@@ -79,6 +48,7 @@ ul {
 
 a {
   text-decoration: none;
+  color: inherit;
 }
 
 img {
@@ -86,107 +56,161 @@ img {
   height: auto;
 }
 
-
-/*############################ LAYOUT ############# */
-
-.l-main {
-  overflow: hidden;
+h1 {
+  font-weight: $font-black;
+  font-size: $biggest-font-size;
+  color: $title-color;
+  line-height: 73px;
 }
 
-.bd-container {
-  max-width: 968px;
-  width: calc(100% - 3rem);
-  margin-left: $mb-3;
-  margin-right: $mb-3;
+h2 {
+  font-weight: $font-bold;
+  font-size: $h2-font-size;
+  color: $title-color;
+  line-height: 44px;
+  text-align: center;
 }
 
-/*############################ HEADER ############# */
-.main-header {
-  width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: $z-index;
-  background-color: $header-bgc-color;
+h3 {
+  font-weight: $font-regular;
+  font-size: $h3-font-size;
+  color: $title-color;
+  line-height: 20px;
+  letter-spacing: 1px;
 }
 
-/*############################ NAV ############# */
-nav {
-  font-family: $body-font;
-  height: $nav-height;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  text-transform: uppercase;
+p {
+  font-weight: 300;
+  font-size: $normal-font-size;
+  line-height: 28px;
   color: $text-color;
+}
 
-  .nav__logo img {
-    width: 300px;
-  }
+h1, h2, h3, ul, p {
+  margin: 0;
+}
 
-  .nav__list {
+//###################################### HEADER ################################
+.main-header {
+  position: fixed;
+  z-index: 5;
+  width: 100%;
+  background-color: $second-color;
+  padding: 30px 0;
+}
+.sticky{
+  background: #1b1b1b;
+  padding: 10px 0;
+  box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.1);
 
+}
 
+//###################################### NAV ####################################
+
+nav.main-nav {
+  max-width: 90%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .nav__menu-list {
+    display: inline-flex;
+    align-items: center;
+    li.nav__item.reservation a{
+      color: white;
+      line-height: 17px;
+      text-transform: uppercase;
+    }
     .nav__item {
 
-      .nav__link {
+
+      margin-left: 25px;
+
+      & a{
+        transition: all .5s ease;
+        text-transform: uppercase;
         color: $text-color;
+        font-size: calc(13px + .2vw);
+        font-weight: 500;
+
+      }
+      & a:hover{
+        color: $first-color;
+        font-weight: bolder;
+      }
+      &.reservation{
+
+        display: block;
+        letter-spacing: 0.5px;
+        border-radius: 5px;
+        padding: 10px 9px;
+        border: 1px solid white;
+        margin-left: calc( 50px + 10vw);
+        background-color: $first-color;
+      }
+
+    }
+
+  }
+}
+ion-icon{
+  color: $text-color;
+  font-size: 30px;
+  cursor: pointer;
+  --ionicon-stroke-width: 60px;
+  display: none;
+}
+.menu-close{
+  position: absolute;
+  top: 20px;
+  right: 30px;
+}
+@media screen and (max-width: 1024px){
+  nav.main-nav .nav__menu-list .nav__item{
+    margin-left: 10px;
+  }
+
+  nav.main-nav .nav__menu-list .nav__item.reservation{
+    margin-left: calc(24px + 5vw);
+  }
+}
+@media screen and (max-width: 868px) {
+  .main-header{
+    padding: 10px 0;
+  }
+  ion-icon{
+    display: block;
+
+  }
+  .hide{
+    display: none;
+  }
+
+  nav.main-nav{
+    .nav__menu-list {
+      position: fixed;
+      top: 0;
+      left: -100%;
+      height: 100vh;
+      width: 100%;
+      max-width: 400px;
+      background-color: $first-color;
+      padding: 60px 0;
+      text-align: center;
+      display: block;
+      transition: all .5s ease;
+      .nav__item{
+        margin-top: 45px;
+        font-size: 23px;
+      }
+      .reservation{
+      margin: 30px 25px;
       }
     }
-  }
-
-}
-
-@media screen and (max-width: 768px) {
-  nav .nav__logo {
-    padding-right: 2vw;
-
-    img {
-      width: 90vw;
-      max-width: 300px;
+    .nav__menu-show{
+      left: 0;
     }
   }
-  .nav__menu {
-    background-color:$header-bgc-color;
-    position: fixed;
-    line-height: 2.5rem;
-    top: $nav-height;
-    left: 0;
-    right: 0;
-    width: 100%;
-    margin: 0 auto;
-    padding: 1rem 0 0;
-    transition: 0.4s;
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
-    border-radius: 0.3rem;
-    z-index: $z-index;
-    text-align: center;
-    font-size: 14px;
-    font-family: $body-font-2;
-    text-transform: capitalize;
-    font-weight: $font-bold;
-  }
-  .nav__menu-close{
-    transform: translateY(-100%);
-  }
-  .nav_toggle {
-    font-size: 1.3rem;
-    margin-right: -10px;
-    cursor: pointer;
-    z-index: $z-index;
-  }
+
 }
-
-.nav__list {
-  .nav__item {
-    a.nav__link {
-      transition: .3s;
-      &:hover {
-        color: $main-color;
-      }
-    }
-
-  }
-}
-
-

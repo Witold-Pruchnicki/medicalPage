@@ -1,28 +1,55 @@
 import '../scss/main.scss';
+
 require.context('../images', true, /\.(jpe?g|png|gif|svg)$/i);
 
 /*==================== MENU SHOW Y HIDDEN ====================*/
-const navMenu = document.querySelector('.nav__menu');
-const menuBar = document.querySelector('.nav_toggle')
+const header = document.querySelector('.main-header')
+const navMenu = document.querySelector('.nav__menu-list');
+const menuBtn = document.querySelector('.nav__toggle');
+const closeBtn = document.querySelector('.menu-close')
+const navLink = document.querySelectorAll('.nav__item')
 
-menuBar.addEventListener('click', ()=>{
-    navMenu.classList.toggle('nav__menu-close')
+menuBtn.addEventListener('click', ()=>{
+    navMenu.classList.toggle('nav__menu-show');
+    menuBtn.classList.toggle('hide')
+})
+closeBtn.addEventListener('click', ()=>{
+    navMenu.classList.remove('nav__menu-show');
+    menuBtn.classList.remove('hide')
 })
 
-/*==================== ACCORDION SKILLS ====================*/
+navLink.forEach(link => {
+    link.addEventListener('click', () => {
+        navMenu.classList.remove('nav__menu-show')
+    })
+})
 
-/*==================== QUALIFICATION TABS ====================*/
-
-/*==================== SERVICES MODAL ====================*/
-
-/*==================== PORTFOLIO SWIPER  ====================*/
-
-/*==================== TESTIMONIAL ====================*/
-
-/*==================== SCROLL SECTIONS ACTIVE LINK ====================*/
-
+window.onscroll = ()=>{
+    this.scrollY > 20 ? header.classList.add('sticky') : header.classList.remove('sticky')
+}
 /*==================== CHANGE BACKGROUND HEADER ====================*/
+function scrollHeader() {
+    const nav = document.querySelector('.main-header')
+    if (window.scrollY >= 30){
+        nav.classList.add('scroll-header');
+    } else {
+        nav.classList.remove('scroll-header')
+    }
+}
+console.log(scrollHeader())
+window.addEventListener('scroll', scrollHeader)
 
-/*==================== SHOW SCROLL UP ====================*/
-
-/*==================== DARK LIGHT THEME ====================*/
+// /*==================== SHOW SCROLL TOP ====================*/
+// function scrollTop() {
+//     const scrollTop = document.querySelector('.scrolltop');
+//     if (this.scrollY >= 560) {
+//         scrollTop.classList.add('show-scroll')
+//     } else {
+//         scrollTop.classList.remove('show-scroll')
+//     }
+// }
+//
+// window.addEventListener('scroll', scrollTop)
+//
+//
+// /*==================== DARK LIGHT THEME ====================*/
