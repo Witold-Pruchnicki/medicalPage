@@ -2,6 +2,32 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="431e6fe2-4a73-4afd-9d94-41946f45d480" name="Default Changelist" comment="First initial commit">
+      <change afterPath="$PROJECT_DIR$/dist/src/images/152731192_141731887723766_2093787009713804808_n.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/src/images/153446593_186161076189066_8780819121995943081_n.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/src/images/Group 35.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/src/images/banki.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/src/images/cewnikowanie.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/src/images/intro__section-img.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/src/images/kroplowki.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/src/images/odlezyny.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/src/images/pielegnacja-stomii.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/src/images/plukanie-portow.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/src/images/toaleta-w-lozku.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/src/images/uslugi-pielegniarskie.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/src/images/zastrzyki.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/src/images/zdejmowanie-szwow.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/images/152731192_141731887723766_2093787009713804808_n.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/images/banki.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/images/cewnikowanie.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/images/intro__section-img.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/images/kroplowki.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/images/odlezyny.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/images/pielegnacja-stomii.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/images/plukanie-portow.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/images/toaleta-w-lozku.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/images/uslugi-pielegniarskie.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/images/zastrzyki.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/images/zdejmowanie-szwow.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/bundle.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/bundle.min.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/bundle.min.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/bundle.min.js.map" afterDir="false" />
@@ -30,12 +56,15 @@
     <option name="selectedIndex" value="1" />
   </component>
   <component name="ProjectId" id="1vtSpCsRH4QP4ywRKDtr30xB41A" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -62,6 +91,7 @@
       <workItem from="1627542802577" duration="67000" />
       <workItem from="1627652259905" duration="15229000" />
       <workItem from="1627674264304" duration="25885000" />
+      <workItem from="1628055533622" duration="17256000" />
     </task>
     <task id="LOCAL-00001" summary="First initial commit">
       <created>1627450062385</created>
@@ -95,6 +125,7 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="First initial commit" />
     <option name="LAST_COMMIT_MESSAGE" value="First initial commit" />
   </component>

@@ -3,8 +3,14 @@
 
 /*===== VARIABLES CSS =====*/
 
+@function proportional-text($font-size, $viewport-size) {
+  @return ($font-size*100/$viewport-size)+vw;
+}
+
+
 $header-height: 100px;
 
+$base-font-size: 40px;
 /*========== Colors ==========*/
 $first-color: #4FB2E5;
 $second-color: rgba(79, 178, 229, 0.2);
@@ -32,6 +38,11 @@ $z-fixed: 100;
 
 html {
   scroll-behavior: smooth;
+}
+
+html {
+  font-size: proportional-text($base-font-size, 1440px);
+
 }
 
 body {
@@ -95,13 +106,14 @@ h1, h2, h3, ul, p {
   position: fixed;
   z-index: 5;
   width: 100%;
-  background-color: $second-color;
   padding: 30px 0;
+  transition: 1s;
 }
-.sticky{
-  background: #1b1b1b;
+
+.sticky {
+  background: #fff;
   padding: 10px 0;
-  box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.1);
+  box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.1);
 
 }
 
@@ -117,17 +129,19 @@ nav.main-nav {
   .nav__menu-list {
     display: inline-flex;
     align-items: center;
-    li.nav__item.reservation a{
+
+    li.nav__item.reservation a {
       color: white;
       line-height: 17px;
       text-transform: uppercase;
     }
+
     .nav__item {
 
 
       margin-left: 25px;
 
-      & a{
+      & a {
         transition: all .5s ease;
         text-transform: uppercase;
         color: $text-color;
@@ -135,18 +149,20 @@ nav.main-nav {
         font-weight: 500;
 
       }
-      & a:hover{
+
+      & a:hover {
         color: $first-color;
         font-weight: bolder;
       }
-      &.reservation{
+
+      &.reservation {
 
         display: block;
         letter-spacing: 0.5px;
         border-radius: 5px;
         padding: 10px 9px;
         border: 1px solid white;
-        margin-left: calc( 50px + 10vw);
+        margin-left: calc(20px + 8vw);
         background-color: $first-color;
       }
 
@@ -154,40 +170,182 @@ nav.main-nav {
 
   }
 }
-ion-icon{
+
+ion-icon {
   color: $text-color;
   font-size: 30px;
   cursor: pointer;
   --ionicon-stroke-width: 60px;
   display: none;
 }
-.menu-close{
+
+.menu-close {
   position: absolute;
   top: 20px;
   right: 30px;
 }
-@media screen and (max-width: 1024px){
-  nav.main-nav .nav__menu-list .nav__item{
-    margin-left: 10px;
+
+
+//######################################## MAIN #############################################
+//###### ############################REUSABLE #########################################
+.section__description {
+  font-weight: normal;
+  font-size: 1.1vw;
+  line-height: 1.3vw;
+  text-transform: uppercase;
+  letter-spacing: 0.06vw;
+  color: $title-color;
+
+
+}
+
+//###### ############################ #########################################
+main {
+  min-height: 2000px;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.section {
+  padding-left: 3rem;
+  padding-right: 1rem;
+}
+
+.intro__section {
+  padding-top: 180px;
+  background-color: $second-color;
+
+  display: flex;
+  justify-content: space-between;
+
+  .intro__section-text {
+    max-width: 33vw;
+    padding-top: 8%;
+
+    .intro-title {
+      max-width: 80%;
+      margin-top: 1.7vw;
+      font-style: normal;
+      font-weight: 900;
+      font-size: 3.8vw;
+      line-height: 5vw;
+    }
+
+    .intro-text {
+      font-style: normal;
+      font-weight: 300;
+      font-size: 1.1vw;
+      line-height: 1.92vw;
+      color: $text-color;
+      padding: 3vw 0;
+
+
+    }
   }
 
-  nav.main-nav .nav__menu-list .nav__item.reservation{
-    margin-left: calc(24px + 5vw);
+  .intro__section-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
   }
 }
+
+//####################### services__section ##################
+.services__section {
+  padding: 10vw 3rem 1rem;
+
+  .section__description {
+    text-align: center;
+
+  }
+
+  .section-bold-text {
+    margin-top: .5vw;
+    margin-bottom: 3vw;
+  }
+
+  .tiles-wrapper {
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 100%;
+    gap: 1rem;
+
+    .tile {
+      border: 2px solid #4FB2E5;
+      box-shadow: 10px 10px 0px #4FB2E5;
+      border-radius: 24px;
+      text-align: center;
+      color: #4B4B4B;
+
+      &:nth-last-child(1){
+        margin: 0 auto;
+        width: 100%;
+        margin-left: 50%;
+        transform: translateX(60%);
+      }
+
+        .tile-icon{
+          margin: 5% auto;
+          background: #4FB2E5;
+          border-radius: 50%;
+          width: 100px;
+          padding: 20px;
+          img{
+            width: 50px;
+          }
+        }
+      .tile-title{
+        font-style: normal;
+        font-weight: bold;
+        font-size: 2vw;
+        line-height: 2vw;
+      }
+      .tile-description{
+        padding: 5%;
+      }
+
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  nav.main-nav {
+    max-width: 98%;
+  }
+  .services__section{
+    .tiles-wrapper{
+      grid-template-columns: repeat( auto-fit, minmax(250px, 1fr));
+      .tile{
+        &:nth-last-child(1){
+          margin-left: 0;
+          transform: translateX(0);
+        }
+      }
+    }
+  }
+
+}
+
 @media screen and (max-width: 868px) {
-  .main-header{
+  .main-header {
     padding: 10px 0;
   }
-  ion-icon{
+  ion-icon {
     display: block;
 
   }
-  .hide{
+  .hide {
     display: none;
   }
 
-  nav.main-nav{
+  nav.main-nav {
+    margin: 0;
+
     .nav__menu-list {
       position: fixed;
       top: 0;
@@ -200,17 +358,55 @@ ion-icon{
       text-align: center;
       display: block;
       transition: all .5s ease;
-      .nav__item{
+
+      .nav__item {
         margin-top: 45px;
         font-size: 23px;
       }
-      .reservation{
-      margin: 30px 25px;
+
+      .reservation {
+        margin: 30px 25px;
       }
     }
-    .nav__menu-show{
+
+    .nav__menu-show {
       left: 0;
     }
   }
+  .section__description {
+    font-size: 2vw;
 
+  }
+  .intro__section {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 100px;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+
+    .intro__section-text {
+      max-width: 100%;
+      padding-top: 4%;
+      text-align: center;
+
+      .intro-title {
+        max-width: 100%;
+        margin: 3vw 0;
+        font-size: 4vw;
+      }
+
+      .intro-text {
+        font-size: 2vw;
+      }
+    }
+
+    .intro__section-img {
+      width: 100%;
+    }
+  }
+  .tiles-wrapper{
+    padding: 0 2rem;
+
+  }
 }

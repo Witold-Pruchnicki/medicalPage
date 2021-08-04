@@ -21,6 +21,7 @@ closeBtn.addEventListener('click', ()=>{
 navLink.forEach(link => {
     link.addEventListener('click', () => {
         navMenu.classList.remove('nav__menu-show')
+        menuBtn.classList.toggle('hide')
     })
 })
 
@@ -31,9 +32,9 @@ window.onscroll = ()=>{
 function scrollHeader() {
     const nav = document.querySelector('.main-header')
     if (window.scrollY >= 30){
-        nav.classList.add('scroll-header');
+        nav.classList.add('sticky');
     } else {
-        nav.classList.remove('scroll-header')
+        nav.classList.remove('sticky')
     }
 }
 console.log(scrollHeader())
