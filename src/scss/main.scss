@@ -34,6 +34,7 @@ $z-fixed: 100;
 
 html {
   scroll-behavior: smooth;
+  transition: 3s;
 }
 
 
@@ -264,7 +265,7 @@ main {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     max-width: 100%;
-    gap: 1rem;
+    gap: 2rem;
 
     .tile {
       border: 2px solid #4FB2E5;
@@ -362,7 +363,7 @@ main {
 
       .person-name{
         font-size: 1.8vw;
-        color: $text-color;
+
       }
       .person-position{
         margin-top: 10px;
@@ -382,11 +383,34 @@ main {
     justify-content: center;
     padding: 10px 30px;
 
+
   }
 }
 ion-icon.phone{
   display: block;
   font-size: 20px;
+}
+footer.footer{
+  display: flex;
+  justify-content: space-between;
+  padding: 5rem 5rem;
+  .footer__column{
+    text-align: center;
+  }
+  .footer__column-name{
+    font-weight: bold;
+    font-size: calc(18px + .1vw);
+    color: $title-color;
+  }
+  .footer__menu-contact{
+    margin-top: 2rem;
+    .phone-wrapper{
+      display: flex;
+      margin-top: 8px;
+      gap:5px;
+    }
+  }
+
 }
 @media screen and (max-width: 1024px) {
   nav.main-nav {
@@ -544,6 +568,26 @@ ion-icon.phone{
        
     }
   }
+  .personnel__section .person-wrapper{
+    width: 85%;
+    .person{
+      .person-name{
+        font-size: 3.5vw;
+      }}
+  }
+  footer.footer{
+    padding: 1rem 2rem;
+    flex-direction: column;
+    .footer__column{
+      margin-top: 40px;
+
+      .phone-wrapper{
+        justify-content: center;
+        margin-top: 25px;
+        font-size: 20px;
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 500px) {
@@ -585,4 +629,18 @@ ion-icon.phone{
   .about-us__section .section-two-column-text .features-list li.feature{
     text-align: center;
   }
+  .personnel__section {
+
+    .person-wrapper{
+      flex-direction: column;
+      row-gap: 40px;
+      .person{
+        .person-name{
+          font-size: 25px;
+        }
+      }
+    }
+
+  }
+
 }

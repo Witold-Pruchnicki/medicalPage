@@ -26,31 +26,15 @@ navLink.forEach(link => {
 })
 
 window.onscroll = ()=>{
-    this.scrollY > 20 ? header.classList.add('sticky') : header.classList.remove('sticky')
+    window.scrollY > 20 ? header.classList.add('sticky') : header.classList.remove('sticky')
 }
-/*==================== CHANGE BACKGROUND HEADER ====================*/
-function scrollHeader() {
-    const nav = document.querySelector('.main-header')
-    if (window.scrollY >= 30){
-        nav.classList.add('sticky');
-    } else {
-        nav.classList.remove('sticky')
-    }
-}
-console.log(scrollHeader())
-window.addEventListener('scroll', scrollHeader)
 
-// /*==================== SHOW SCROLL TOP ====================*/
-// function scrollTop() {
-//     const scrollTop = document.querySelector('.scrolltop');
-//     if (this.scrollY >= 560) {
-//         scrollTop.classList.add('show-scroll')
-//     } else {
-//         scrollTop.classList.remove('show-scroll')
-//     }
-// }
-//
-// window.addEventListener('scroll', scrollTop)
-//
-//
-// /*==================== DARK LIGHT THEME ====================*/
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});

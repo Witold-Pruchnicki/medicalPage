@@ -14,16 +14,15 @@
 <header class="main-header">
     <nav class="main-nav">
         <div class="logo">
-            <a href="#" class="nav__logo"><img src="images/Uslugi-pielegniarskie-kepno-logo.png" alt=""/></a>
+            <a href="index.html" class="nav__logo"><img src="images/Uslugi-pielegniarskie-kepno-logo.png"  alt=""/></a>
         </div>
         <ul class="nav__menu-list">
             <div class="menu-close">
                 <ion-icon name="close-outline"></ion-icon>
             </div>
-            <li class="nav__item"><a href="#glowna" class="nav__link"> Strona główna</a></li>
             <li class="nav__item"><a href="#uslugi" class="nav__link">Usługi</a></li>
             <li class="nav__item"><a href="#kontakt" class="nav__link">Kontakt</a></li>
-            <li class="nav__item reservation"><a href="#kontakt" class="nav__link">Umów wizytę</a></li>
+            <li class="nav__item reservation"><a href="tel:+48 697 727 251" class="nav__link">Umów wizytę</a></li>
         </ul>
         <div class="nav__toggle">
             <ion-icon name="menu-outline"></ion-icon>
@@ -52,7 +51,7 @@
         </div>
     </section>
 
-    <section class="section services__section">
+    <section class="section services__section" id="uslugi">
         <h3 class="section__description">
             usługi
         </h3>
@@ -154,7 +153,7 @@
 
     </section>
     </section>
-    <section class="section personnel__section">
+    <section class="section personnel__section" id="kontakt">
         <h2 class="section-bold-text">Nasz Personel</h2>
         <div class="person-wrapper">
             <div class="person">
@@ -188,26 +187,24 @@
 <footer class="footer">
     <div class="footer__column">
         <div class="logo">
-            <a href="#" class="nav__logo"><img src="src/images/Uslugi-pielegniarskie-kepno-logo.png" alt=""/></a>
+            <a href="index.html" class="nav__logo"><img src="images/Uslugi-pielegniarskie-kepno-logo.png" alt=""/></a>
         </div>
-        <p class="footer-text"></p>
-    </div>
-    <div class="footer__column">
-        <h3 class="footer__column-name">Informacje</h3>
-        <ul class="footer__menu-list">
-            <li class="footer__menu-item"><a href="">Kontakt</a></li>
-            <li class="footer__menu-item"><a href="">Kontakt</a></li>
-            <li class="footer__menu-item"><a href="">Kontakt</a></li>
-        </ul>
     </div>
     <div class="footer__column">
         <h3 class="footer__column-name">Kontakt</h3>
-        <ul class="footer__menu-contact">
-            <li class="footer__menu-item"><a href="">email</a></li>
-            <li class="footer__menu-item"><a href="">phone</a></li>
-        </ul>
+        <div class="footer__menu-contact">
+            <div class="phone-wrapper">
+                <ion-icon name="call-outline" class="phone"></ion-icon><a href="tel:+48 697 727 251"> +48 697 727 251</a>
+            </div>
+            <div class="phone-wrapper">
+                <ion-icon name="call-outline" class="phone"></ion-icon><a href="tel:+48 606 878 616"> +48 606 878 616</a>
+            </div>
+            <div class="phone-wrapper email">
+                <ion-icon name="mail-open-outline" class="phone"></ion-icon><a href="mailto:uslugipielegniarskiekepno@gmail.com"> uslugipielegniarskiekepno@gmail.com</a>
+            </div>
+
+        </div>
     </div>
-    <h1 class="test">TESTOWY FONT</h1>
 </footer>
 
 <!--==================== SCROLL TOP ====================-->

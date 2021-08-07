@@ -6,24 +6,9 @@
       <change beforePath="$PROJECT_DIR$/dist/bundle.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/bundle.min.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/bundle.min.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/bundle.min.js.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/src/images/152731192_141731887723766_2093787009713804808_n.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/src/images/153446593_186161076189066_8780819121995943081_n.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/src/images/Group 35.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/src/images/Uslugi-pielegniarskie-kepno-logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/src/images/banki.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/src/images/cewnikowanie.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/src/images/intro__section-img.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/src/images/kroplowki.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/src/images/odlezyny.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/src/images/pielegnacja-stomii.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/src/images/plukanie-portow.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/src/images/toaleta-w-lozku.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/src/images/uslugi-pielegniarskie.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/src/images/zastrzyki.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/src/images/zdejmowanie-szwow.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scss/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/main.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,6 +39,7 @@
       <option name="presentableId" value="Default" />
       <updated>1628089361446</updated>
       <workItem from="1628089362773" duration="15049000" />
+      <workItem from="1628318034400" duration="6890000" />
     </task>
     <servers />
   </component>
