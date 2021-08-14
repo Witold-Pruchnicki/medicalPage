@@ -105,7 +105,7 @@ h1, h2, h3, ul, p {
 .sticky {
   background: #fff;
   padding: 10px 0;
-  box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
 
 }
 
@@ -117,6 +117,9 @@ nav.main-nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  .nav__logo img{
+    width: 400px;
+  }
 
   .nav__menu-list {
     display: inline-flex;
@@ -181,8 +184,8 @@ ion-icon {
 //######################################## MAIN #############################################
 //###### ############################REUSABLE #########################################
 .section__description {
-  font-weight: normal;
-  font-size: calc(10px + .5vw);
+  font-weight: bolder;
+  font-size: 30px;
   line-height: 1.5;
   text-transform: uppercase;
   letter-spacing: 0.06vw;
@@ -258,6 +261,7 @@ main {
   .section-bold-text {
     margin-top: .5vw;
     margin-bottom: 3vw;
+    font-weight: 400;
   }
 
   .tiles-wrapper {
@@ -269,10 +273,14 @@ main {
 
     .tile {
       border: 2px solid #4FB2E5;
-      box-shadow: 10px 10px 0px #4FB2E5;
+      box-shadow: 10px 10px 0 #4FB2E5;
       border-radius: 24px;
       text-align: center;
       color: #4B4B4B;
+      &-title{
+        color: #2F6E89;
+
+      }
 
       &:nth-last-child(1) {
         margin: 0 auto;
@@ -339,8 +347,6 @@ main {
         font-weight: bold;
         font-size: calc(18px + .1vw);
         color: $title-color;
-
-
       }
 
       .li-sign {
@@ -350,6 +356,15 @@ main {
 
     }
   }
+}
+p.feature{
+  text-align: left;
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+  font-weight: bold;
+  font-size: calc(18px + .1vw);
+  color: $title-color;
 }
 .personnel__section{
   margin-top: 8%;
@@ -381,10 +396,29 @@ main {
   .phone-wrapper{display:flex ;
     text-align: center;
     justify-content: center;
+    column-gap: 10px;
     padding: 10px 30px;
-
+  a{
+    font-size: calc(18px + .1vw);
+    font-weight: bold;
+    color:#2F6E89;
+  }
+    
 
   }
+}
+ .email{
+   font-weight: $font-bold;
+   font-size: 1.8vw;
+   color: $title-color;
+   display: flex;
+   column-gap: 10px;
+   width: fit-content;
+  margin: 30px auto;
+   ion-icon.phone{
+     font-size: 25px;
+     color: $title-color;
+   }
 }
 ion-icon.phone{
   display: block;
@@ -468,9 +502,8 @@ footer.footer{
   nav.main-nav {
     max-width: 90%;
     margin: 0 8px;
-
-    .logo {
-      max-width: 85%;
+    .nav__logo img{
+      width: 300px;
     }
 
     .nav__menu-list {
@@ -599,7 +632,7 @@ footer.footer{
     font-size: 22px;
   }
   .services__section {
-    padding: 20px 10px 10px;
+    padding: 90px 10px 10px;
 
     .tiles-wrapper {
       padding: 0 15px 15px;

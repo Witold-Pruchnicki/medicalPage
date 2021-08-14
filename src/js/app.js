@@ -29,12 +29,4 @@ window.onscroll = ()=>{
     window.scrollY > 20 ? header.classList.add('sticky') : header.classList.remove('sticky')
 }
 
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
 
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
-    });
-});

@@ -6,6 +6,7 @@
       <change beforePath="$PROJECT_DIR$/dist/bundle.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/bundle.min.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/bundle.min.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/bundle.min.js.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/intro__section-img.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/intro__section-img.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scss/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/main.scss" afterDir="false" />
@@ -40,6 +41,8 @@
       <updated>1628089361446</updated>
       <workItem from="1628089362773" duration="15049000" />
       <workItem from="1628318034400" duration="6890000" />
+      <workItem from="1628603515428" duration="4181000" />
+      <workItem from="1628921065721" duration="1338000" />
     </task>
     <servers />
   </component>
